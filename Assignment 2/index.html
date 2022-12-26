@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href=index.css>
+    <title>
+        Assignment 2
+    </title>
+      
+    <style>
+        
+    </style>
+</head>
+  
+<body>
+    <h1 class="center" id="title">CSC4130 Assignment 2 (Yu Yongqi)</h1>
+    <div class="center" id="header"><b>draw, move, and reset different shapes</b></div>
+    <hr>
+    <div class="center">
+    <canvas id="canvas" width="1200" height="400"></canvas>
+    <input type="button" value="draw" onclick="use_tool('draw');">
+    <input type="button" value="move" onclick="use_tool('move');">
+    <input type="button" value="reset" onclick="use_tool('reset');"></br>
+    <!-- define a color menu and show the corresponding hex value (8pts)-->
+    <!-- your code is here -->
+    <input type="color" id="favcolor" value="#ff0000"><span id="colorVal"></span><br>
+    <!-- define a drop-down list with three options for drawing circle, rectangle, and triangle (6pts)-->
+    <!-- your code is here -->
+    <select id="shape" onchange="select_shape(this)">
+        <option value="Circle">Circle</option>
+        <option value="Rect">Rectangle</option>
+        <option value="Triangle">Triangle</option>
+    </select>
+    <label for="shape">Shape Option</label>
+    <br>
+
+    <input type="range" min="0" max="1" value="0.8" step = "0.1" class="slider" id="opacity" name='opacity'>
+    <label for="opacity">Opacity</label>
+    <p class="center">Value: <span id="value"></span></p>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js"></script> 
+    <script src="src/index.js"></script>
+</body>
+  
+</html>
